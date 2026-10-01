@@ -23,4 +23,13 @@ while True:
 
         print("Contact added successfully!")
 
-        break
+    elif choice == 2 :
+        if len(contacts) == 0:
+            print("NO Contact Available.")
+
+        else:
+            print("==== CONTACTS ====")
+
+            for contact in contacts:
+                print("Name:", contact["name"])
+                print("Phone:", contact["phone"])
