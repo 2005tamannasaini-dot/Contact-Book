@@ -33,3 +33,18 @@ while True:
             for contact in contacts:
                 print("Name:", contact["name"])
                 print("Phone:", contact["phone"])
+
+    elif choice == 3 :
+        search_name = input("Enter contact Name to search: ").lower()
+
+        found = False
+
+        for contact in contacts:
+            if contact["name"].lower() == search_name.lower():
+                print("\nContact Found!")
+                print("Name:", contact["name"])
+                print("Phone:", contact["phone"])
+                found = True
+
+        if not found :
+             print("Contact not found.")        
