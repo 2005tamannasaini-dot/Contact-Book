@@ -35,7 +35,7 @@ while True:
                 print("Phone:", contact["phone"])
 
     elif choice == 3 :
-        search_name = input("Enter contact Name to search: ").lower()
+        search_name = input("Enter contact Name to search: ")
 
         found = False
 
@@ -47,4 +47,20 @@ while True:
                 found = True
 
         if not found :
-             print("Contact not found.")        
+            print("Contact not found.")        
+
+    elif choice == 4 :
+        delete_name =  input("Enter contact Name to Delete : ")        
+
+        found = False
+
+        for contact in contacts:
+            if contact["name"].lower() == delete_name.lower():
+                contacts.remove(contact)
+                print("Contact Delete Successfully!.")
+                found = True
+                break
+
+        if not found: 
+            print("Contact not found.")        
+               
