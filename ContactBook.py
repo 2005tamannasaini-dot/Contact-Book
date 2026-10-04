@@ -2,14 +2,15 @@
  
 contacts = []
 
-print("===== CONTACT BOOK =====")
-print("1. ADD CONTACT")
-print("2. VIEW CONTACT")
-print("3. SEARCH CONTACT")
-print("4. DELETE CONTACT")
-print("5. EXIT")
-
 while True:
+
+    print("===== CONTACT BOOK =====")
+    print("1. ADD CONTACT")
+    print("2. VIEW CONTACT")
+    print("3. SEARCH CONTACT")
+    print("4. DELETE CONTACT")
+    print("5. EXIT")
+
     choice = int(input("Enter Your Choice:"))
 
     if choice == 1 :
@@ -63,4 +64,10 @@ while True:
 
         if not found: 
             print("Contact not found.")        
-               
+
+    elif choice == 5 :
+        print("Thank Your for using Contact Book.")
+        break
+
+    else:
+        print("Invalid Choice! Please Select 1 to 5. ")
