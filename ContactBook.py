@@ -15,10 +15,16 @@ while True:
 
     if choice == 1 :
         name = input("Enter your Name:")
-        phone = int(input("Enter Your Phone No.:"))
 
+        while True:
+            phone = input("Enter Your Phone No.:")
+
+            if phone.isdigit() and len(phone) == 10:
+                break
+
+            print("Please enter a valid 10-digit phone number.")
         contact = {"name" : name,
-                   "phone": phone}
+                    "phone": phone}
 
         contacts.append(contact)
 
