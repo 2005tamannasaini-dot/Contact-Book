@@ -14,7 +14,14 @@ while True:
     choice = int(input("Enter Your Choice:"))
 
     if choice == 1 :
-        name = input("Enter your Name:")
+        while True:
+
+            name = input("Enter your Name:")
+            
+            if name.strip():
+                break
+
+            print("Name cannot be empty.")
 
         while True:
             phone = input("Enter Your Phone No.:")
