@@ -30,12 +30,23 @@ while True:
                 break
 
             print("Please enter a valid 10-digit phone number.")
-        contact = {"name" : name,
+            
+        duplicate = False
+
+        for contact in contacts:
+            if contact["name"].lower() == name.lower():
+                duplicate = True
+                break
+
+        if duplicate:
+            print("Contact already exists!")
+        else:
+            contact = {"name" : name,
                     "phone": phone}
 
-        contacts.append(contact)
+            contacts.append(contact)
 
-        print("Contact added successfully!")
+            print("Contact added successfully!")
 
     elif choice == 2 :
         if len(contacts) == 0:
