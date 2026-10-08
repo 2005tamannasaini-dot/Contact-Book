@@ -9,7 +9,9 @@ while True:
     print("2. VIEW CONTACT")
     print("3. SEARCH CONTACT")
     print("4. DELETE CONTACT")
-    print("5. EXIT")
+    print("5. Update Contact.")
+    print("6. EXIT")
+
 
     choice = int(input("Enter Your Choice:"))
 
@@ -87,9 +89,33 @@ while True:
                 break
 
         if not found: 
-            print("Contact not found.")        
+            print("Contact not found.")   
 
-    elif choice == 5 :
+    elif choice == 5 :  
+        update_name = input ("Enter contact Name to Update: ")
+
+        found = False
+
+        for contact in contacts:
+            if contact["name"].lower() == update_name.lower():
+
+                while True:
+                    new_phone =input("Enter new phone number:")
+
+                    if new_phone.isdigit() and len (new_phone) ==10:
+                        break
+
+                contact["phone"] = new_phone
+
+                print("Contact updated successfully!")
+                found =True
+                break
+
+        if not found:
+            print("Contact not found.")
+
+
+    elif choice == 6 :
         print("Thank Your for using Contact Book.")
         break
 
