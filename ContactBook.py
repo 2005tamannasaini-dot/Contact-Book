@@ -57,7 +57,9 @@ while True:
         else:
             print("==== CONTACTS ====")
 
-            for contact in contacts:
+            sorted_contact = sorted(contacts, key=lambda contact : contact["name"].lower())
+
+            for contact in sorted_contact:
                 print("Name:", contact["name"])
                 print("Phone:", contact["phone"])
 
