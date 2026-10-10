@@ -36,7 +36,8 @@ while True:
         duplicate = False
 
         for contact in contacts:
-            if contact["name"].lower() == name.lower():
+            if  (contact["name"].lower() == name.lower() 
+                 and contact["phone"] == phone):
                 duplicate = True
                 break
 
@@ -70,7 +71,9 @@ while True:
 
         for contact in contacts:
             if contact["name"].lower() == search_name.lower():
-                print("\nContact Found!")
+                if not found:
+                    print("\n====Contact Found====")
+
                 print("Name:", contact["name"])
                 print("Phone:", contact["phone"])
                 found = True
