@@ -2,8 +2,7 @@
  
 contacts = []
 
-while True:
-
+def show_menu():
     print("===== CONTACT BOOK =====")
     print("1. ADD CONTACT")
     print("2. VIEW CONTACT")
@@ -12,6 +11,9 @@ while True:
     print("5. Update Contact.")
     print("6. EXIT")
 
+while True:
+
+    show_menu()
 
     choice = int(input("Enter Your Choice:"))
 
