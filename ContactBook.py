@@ -15,9 +15,9 @@ while True:
 
     show_menu()
 
-    choice = int(input("Enter Your Choice:"))
+    choice = input("Enter Your Choice:")
 
-    if choice == 1 :
+    if choice == "1" :
         while True:
 
             name = input("Enter your Name:")
@@ -53,7 +53,7 @@ while True:
 
             print("Contact added successfully!")
 
-    elif choice == 2 :
+    elif choice == "2" :
         if len(contacts) == 0:
             print("NO Contact Available.")
 
@@ -66,7 +66,7 @@ while True:
                 print("Name:", contact["name"])
                 print("Phone:", contact["phone"])
 
-    elif choice == 3 :
+    elif choice == "3" :
         search_name = input("Enter contact Name to search: ")
 
         found = False
@@ -83,7 +83,7 @@ while True:
         if not found :
             print("Contact not found.")        
 
-    elif choice == 4 :
+    elif choice == "4" :
         delete_name =  input("Enter contact Name to Delete : ")        
 
         found = False
@@ -98,7 +98,7 @@ while True:
         if not found: 
             print("Contact not found.")   
 
-    elif choice == 5 :  
+    elif choice == "5" :  
         update_name = input ("Enter contact Name to Update: ")
 
         found = False
@@ -122,9 +122,9 @@ while True:
             print("Contact not found.")
 
 
-    elif choice == 6 :
+    elif choice == "6" :
         print("Thank Your for using Contact Book.")
         break
 
     else:
-        print("Invalid Choice! Please Select 1 to 5. ")
+        print("Invalid Choice! Please Select 1 to 6. ")
