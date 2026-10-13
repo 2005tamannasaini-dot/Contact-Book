@@ -59,6 +59,7 @@ while True:
 
         else:
             print("==== CONTACTS ====")
+            print("Total Contacts:", len(contacts))
 
             sorted_contact = sorted(contacts, key=lambda contact : contact["name"].lower())
 
